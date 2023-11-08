@@ -1,6 +1,58 @@
 #include "Inventario.h"
 
-void Inventario::setProovedor(std::string Nombre, std::string NIT, std::string DireccionFiscal, std::string Correo, std::string Telefono, int ID)
+Inventario::Inventario(std::string Nombre, int ID, std::string Clasificacion, std::string PrincipisActivos, std::string Dosis, double _PrecioCompra, double _PrecioVenta, int _Stock, Proovedor _Supplier, std::string _Caducidad)
+	: Medicamento(Nombre, ID, Clasificacion, PrincipisActivos, Dosis)
+{
+
+	PrecioCompra = _PrecioCompra;
+	PrecioVenta = _PrecioVenta;
+	Stock = _Stock;
+	Supplier = _Supplier;
+	Caducidad = _Caducidad;
+
+}
+
+double Inventario::getPrecioCompra()
+{
+	return PrecioCompra;
+}
+
+void Inventario::setPrecioCompra(double _PrecioCompra)
+{
+	PrecioCompra = _PrecioCompra;
+}
+
+double Inventario::getPrecioVenta()
+{
+	return PrecioVenta;
+}
+
+void Inventario::setPrecioVenta(double _PrecioVenta)
+{
+	PrecioVenta = _PrecioVenta;
+}
+
+int Inventario::getStock()
+{
+	return Stock;
+}
+
+void Inventario::setStock(int _Stock)
+{
+	Stock = _Stock;
+}
+
+Proovedor Inventario::getSupplier()
+{
+	return Supplier;
+}
+
+void Inventario::setSupplier(Proovedor _Supplier)
+{
+	Supplier = _Supplier;
+}
+
+/*void Inventario::setProovedor(std::string Nombre, std::string NIT, std::string DireccionFiscal, std::string Correo, std::string Telefono, int ID)
 {
 
 	switch (ID) {
@@ -31,32 +83,4 @@ void Inventario::setProovedor(std::string Nombre, std::string NIT, std::string D
 
 	}
 }
-
-void Inventario::AgregarMedicina(Medicamento MedicinaInsertada, int Opcion)
-{
-	InventarioTotal.push_back(MedicinaInsertada);
-
-	switch (Opcion) {
-	 case 1:
-		 Lista1.push_back(MedicinaInsertada);
-		break;
-	 case 2:
-		 Lista2.push_back(MedicinaInsertada);
-		 break;
-	 case 3:
-		 Lista3.push_back(MedicinaInsertada);
-		 break;
-	 case 4:
-		 Lista4.push_back(MedicinaInsertada);
-		 break;
-	}
-
-}
-
-Medicamento Inventario::DeclararMedicina(std::string Nombre, int ID, std::string Clasificacion, std::string PrincipisActivos, std::string Dosis, double PrecioCompra, double PrecioVenta)
-{
-	Medicamento Medicina = Medicamento(Nombre, ID, Clasificacion, PrincipisActivos, Dosis, PrecioCompra, PrecioVenta);
-
-	return Medicina;
-
-}
+*/

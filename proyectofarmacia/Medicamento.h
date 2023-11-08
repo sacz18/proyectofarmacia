@@ -10,14 +10,26 @@ protected:
 	std::string Clasificacion;
 	std::string PrincipiosActivos;
 	std::string Dosis;
-	double PrecioCompra;
-	double PrecioVenta;
 
 public:
-	
-
-
 	Medicamento();
-	Medicamento(std::string _Nombre, int _ID, std::string _Clasificacion, std::string _PrincipiosActivos, std::string _Dosis, double _PrecioCompra, double _PrecioVenta);
+	Medicamento(std::string _Nombre, int _ID, std::string _Clasificacion, std::string _PrincipiosActivos, std::string _Dosis);
+
+	std::string getNombre();
+	void setNombre(std::string _Nombre);
+
+	int getNumeroID();
+	void setNumeroID(int _NumeroID);
+
+	std::string getClasificacion();
+	void setClasificacion(std::string _Clasificacion);
+
+	std::string getPrincipiosActivos();
+	void setPrincipiosActivos(std::string _PrincipiosActivos);
+
+	std::string getDosis();
+	void setDosis(std::string _Dosis);
+
+	
 };
 
