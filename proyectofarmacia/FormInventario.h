@@ -34,7 +34,9 @@ namespace proyectofarmacia {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ preciocompra;
+	protected:
+
 	protected:
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::TextBox^ textBox3;
@@ -61,7 +63,7 @@ namespace proyectofarmacia {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(FormInventario::typeid));
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->preciocompra = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
@@ -73,12 +75,13 @@ namespace proyectofarmacia {
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->SuspendLayout();
 			// 
-			// textBox1
+			// preciocompra
 			// 
-			this->textBox1->Location = System::Drawing::Point(154, 73);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 20);
-			this->textBox1->TabIndex = 0;
+			this->preciocompra->Location = System::Drawing::Point(154, 73);
+			this->preciocompra->Name = L"preciocompra";
+			this->preciocompra->Size = System::Drawing::Size(100, 20);
+			this->preciocompra->TabIndex = 0;
+			this->preciocompra->TextChanged += gcnew System::EventHandler(this, &FormInventario::preciocompra_TextChanged);
 			// 
 			// textBox2
 			// 
@@ -175,7 +178,7 @@ namespace proyectofarmacia {
 			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->textBox2);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->preciocompra);
 			this->Name = L"FormInventario";
 			this->Text = L"FormInventario";
 			this->ResumeLayout(false);
@@ -183,5 +186,9 @@ namespace proyectofarmacia {
 
 		}
 #pragma endregion
-	};
+	private: System::Void preciocompra_TextChanged(System::Object^ sender, System::EventArgs^ e) 
+	{
+
+	}
+};
 }

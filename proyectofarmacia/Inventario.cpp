@@ -1,8 +1,6 @@
 #include "Inventario.h"
 
-Inventario::Inventario()
-{
-}
+
 
 Inventario::Inventario(std::string Nombre, int ID, std::string Clasificacion, std::string PrincipisActivos, std::string Dosis, double _PrecioCompra, double _PrecioVenta, int _Stock, Proovedor _Supplier, std::string _Caducidad)
 	: Medicamento(Nombre, ID, Clasificacion, PrincipisActivos, Dosis)

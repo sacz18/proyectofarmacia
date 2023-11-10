@@ -32,11 +32,13 @@ private:
 	 */
 
 public:
-
-	Inventario();
+	//da error el getprecio porque 
+	//falta agregar todo en Padre 
+	//al igual que ya se hizo con getprecio
+	
 	Inventario(std::string Nombre, int ID, std::string Clasificacion, std::string PrincipisActivos, std::string Dosis, double _PrecioCompra, double _PrecioVenta, int _Stock, Proovedor _Supplier, std::string _Caducidad);
 
-	double getPrecioCompra();
+	double getPrecioCompra()override;
 	void setPrecioCompra(double _PrecioCompra);
 
 	double getPrecioVenta();
