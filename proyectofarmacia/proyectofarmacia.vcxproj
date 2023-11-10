@@ -121,9 +121,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ClasePadre.cpp" />
     <ClCompile Include="FormInventario.cpp" />
-    <ClCompile Include="FormMedicina.cpp" />
     <ClCompile Include="FormProveedor.cpp" />
     <ClCompile Include="Inventario.cpp" />
     <ClCompile Include="Medicamento.cpp" />
@@ -131,11 +129,7 @@
     <ClCompile Include="Proovedor.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ClasePadre.h" />
     <ClInclude Include="FormInventario.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="FormMedicina.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FormProveedor.h">
@@ -151,9 +145,6 @@
   <ItemGroup>
     <EmbeddedResource Include="FormInventario.resx">
       <DependentUpon>FormInventario.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMedicina.resx">
-      <DependentUpon>FormMedicina.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProveedor.resx">
       <DependentUpon>FormProveedor.h</DependentUpon>

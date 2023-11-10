@@ -38,7 +38,7 @@ public:
 	
 	Inventario(std::string Nombre, int ID, std::string Clasificacion, std::string PrincipisActivos, std::string Dosis, double _PrecioCompra, double _PrecioVenta, int _Stock, Proovedor _Supplier, std::string _Caducidad);
 
-	double getPrecioCompra()override;
+	double getPrecioCompra();
 	void setPrecioCompra(double _PrecioCompra);
 
 	double getPrecioVenta();
@@ -52,6 +52,7 @@ public:
 
 	//void setProovedor(std::string Nombre, std::string NIT, std::string DireccionFiscal, std::string Correo, std::string Telefono, int ID);
 
-
+	
 };
 
+ // clase mas
