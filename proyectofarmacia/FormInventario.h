@@ -60,6 +60,7 @@ namespace proyectofarmacia {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(FormInventario::typeid));
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
@@ -103,6 +104,7 @@ namespace proyectofarmacia {
 			// label1
 			// 
 			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::DodgerBlue;
 			this->label1->Location = System::Drawing::Point(55, 73);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(93, 13);
@@ -112,6 +114,7 @@ namespace proyectofarmacia {
 			// label2
 			// 
 			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::DodgerBlue;
 			this->label2->Location = System::Drawing::Point(58, 131);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(85, 13);
@@ -121,6 +124,7 @@ namespace proyectofarmacia {
 			// label3
 			// 
 			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::DodgerBlue;
 			this->label3->Location = System::Drawing::Point(90, 186);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(55, 13);
@@ -130,6 +134,7 @@ namespace proyectofarmacia {
 			// label4
 			// 
 			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::Color::DodgerBlue;
 			this->label4->Location = System::Drawing::Point(93, 262);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(59, 13);
@@ -139,6 +144,7 @@ namespace proyectofarmacia {
 			// label5
 			// 
 			this->label5->AutoSize = true;
+			this->label5->BackColor = System::Drawing::Color::DodgerBlue;
 			this->label5->Location = System::Drawing::Point(57, 334);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(108, 13);
@@ -157,6 +163,8 @@ namespace proyectofarmacia {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(597, 390);
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->label5);
