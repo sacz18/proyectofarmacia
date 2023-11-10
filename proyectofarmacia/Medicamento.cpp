@@ -1,5 +1,10 @@
 #include "Medicamento.h"
 
+Medicamento::Medicamento()
+{
+
+}
+
 Medicamento::Medicamento(std::string _Nombre, int _ID, std::string _Clasificacion, std::string _PrincipiosActivos, std::string _Dosis)
 {
 	Nombre = _Nombre;
@@ -35,7 +40,7 @@ std::string Medicamento::getClasificacion()
 	return Clasificacion;
 }
 
-void Medicamento::setClasificacion(std::string _Nombre)
+void Medicamento::setClasificacion(std::string _Clasificacion)
 {
 	Clasificacion = _Clasificacion;
 }

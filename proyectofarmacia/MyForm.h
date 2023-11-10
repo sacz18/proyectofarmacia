@@ -44,11 +44,13 @@ namespace proyectofarmacia
 		}
 	private: System::Windows::Forms::Button^ AgregarMed;
 	private: System::Windows::Forms::Button^ AgregarProv;
+	private: System::Windows::Forms::Button^ AgregarInv;
 	protected:
 
 
-	private: System::Windows::Forms::Button^ button3;
+
 	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Button^ button1;
 	protected:
 
 	private:
@@ -66,15 +68,17 @@ namespace proyectofarmacia
 		{
 			this->AgregarMed = (gcnew System::Windows::Forms::Button());
 			this->AgregarProv = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->AgregarInv = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// AgregarMed
 			// 
-			this->AgregarMed->Location = System::Drawing::Point(245, 273);
+			this->AgregarMed->Location = System::Drawing::Point(327, 336);
+			this->AgregarMed->Margin = System::Windows::Forms::Padding(4);
 			this->AgregarMed->Name = L"AgregarMed";
-			this->AgregarMed->Size = System::Drawing::Size(118, 23);
+			this->AgregarMed->Size = System::Drawing::Size(157, 28);
 			this->AgregarMed->TabIndex = 0;
 			this->AgregarMed->Text = L"Agregar medicina";
 			this->AgregarMed->UseVisualStyleBackColor = true;
@@ -82,42 +86,57 @@ namespace proyectofarmacia
 			// 
 			// AgregarProv
 			// 
-			this->AgregarProv->Location = System::Drawing::Point(119, 231);
+			this->AgregarProv->Location = System::Drawing::Point(159, 284);
+			this->AgregarProv->Margin = System::Windows::Forms::Padding(4);
 			this->AgregarProv->Name = L"AgregarProv";
-			this->AgregarProv->Size = System::Drawing::Size(75, 42);
+			this->AgregarProv->Size = System::Drawing::Size(100, 52);
 			this->AgregarProv->TabIndex = 1;
 			this->AgregarProv->Text = L"Agregar proveedor";
 			this->AgregarProv->UseVisualStyleBackColor = true;
 			this->AgregarProv->Click += gcnew System::EventHandler(this, &MyForm::AgregarProv_Click);
 			// 
-			// button3
+			// AgregarInv
 			// 
-			this->button3->Location = System::Drawing::Point(276, 199);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(75, 40);
-			this->button3->TabIndex = 2;
-			this->button3->Text = L"Administrar Inventario";
-			this->button3->UseVisualStyleBackColor = true;
+			this->AgregarInv->Location = System::Drawing::Point(368, 245);
+			this->AgregarInv->Margin = System::Windows::Forms::Padding(4);
+			this->AgregarInv->Name = L"AgregarInv";
+			this->AgregarInv->Size = System::Drawing::Size(100, 49);
+			this->AgregarInv->TabIndex = 2;
+			this->AgregarInv->Text = L"Administrar Inventario";
+			this->AgregarInv->UseVisualStyleBackColor = true;
+			this->AgregarInv->Click += gcnew System::EventHandler(this, &MyForm::AgregarInv_Click);
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(427, 272);
+			this->button4->Location = System::Drawing::Point(569, 335);
+			this->button4->Margin = System::Windows::Forms::Padding(4);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(75, 23);
+			this->button4->Size = System::Drawing::Size(100, 28);
 			this->button4->TabIndex = 3;
 			this->button4->Text = L"Imprimir";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(548, 143);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(8, 8);
+			this->button1->TabIndex = 4;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(635, 374);
+			this->ClientSize = System::Drawing::Size(847, 460);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->button4);
-			this->Controls->Add(this->button3);
+			this->Controls->Add(this->AgregarInv);
 			this->Controls->Add(this->AgregarProv);
 			this->Controls->Add(this->AgregarMed);
-			this->Margin = System::Windows::Forms::Padding(2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
@@ -134,7 +153,15 @@ namespace proyectofarmacia
 	}
 	private: System::Void AgregarProv_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		
+		FormProveedor^ fomr_proveedor = gcnew FormProveedor();
+		fomr_proveedor->Show();
 	}
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void AgregarInv_Click(System::Object^ sender, System::EventArgs^ e) {
+		FormInventario^ form_inventario = gcnew FormInventario();
+		form_inventario->Show();
+	}
+
 };
 }

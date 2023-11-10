@@ -1,5 +1,9 @@
 #include "Proovedor.h"
 
+Proovedor::Proovedor()
+{
+}
+
 Proovedor::Proovedor(std::string _Nombre, std::string _NIT, std::string _DireccionFiscal, std::string _Correo, std::string _Telefono)
 {
 	Nombre = _Nombre;
