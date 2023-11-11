@@ -214,7 +214,7 @@ namespace proyectofarmacia {
 			this->label6->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Kristen ITC", 8.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(59, 237);
+			this->label6->Location = System::Drawing::Point(63, 210);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(48, 18);
 			this->label6->TabIndex = 20;
@@ -227,7 +227,7 @@ namespace proyectofarmacia {
 			this->label7->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Kristen ITC", 8.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(29, 170);
+			this->label7->Location = System::Drawing::Point(33, 159);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(78, 34);
 			this->label7->TabIndex = 19;
@@ -274,14 +274,14 @@ namespace proyectofarmacia {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(128, 237);
+			this->textBox1->Location = System::Drawing::Point(128, 210);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(100, 20);
 			this->textBox1->TabIndex = 15;
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(128, 184);
+			this->textBox4->Location = System::Drawing::Point(128, 173);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(100, 20);
 			this->textBox4->TabIndex = 14;
@@ -310,11 +310,12 @@ namespace proyectofarmacia {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(171, 330);
+			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
+			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button1->Location = System::Drawing::Point(125, 222);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->Size = System::Drawing::Size(106, 38);
 			this->button1->TabIndex = 21;
-			this->button1->Text = L"Agregar";
 			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// panel1
@@ -330,7 +331,7 @@ namespace proyectofarmacia {
 			this->panel1->Controls->Add(this->label3);
 			this->panel1->Controls->Add(this->label4);
 			this->panel1->Controls->Add(this->label5);
-			this->panel1->Location = System::Drawing::Point(33, 91);
+			this->panel1->Location = System::Drawing::Point(12, 12);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(312, 193);
 			this->panel1->TabIndex = 22;
@@ -348,9 +349,9 @@ namespace proyectofarmacia {
 			this->panel2->Controls->Add(this->label8);
 			this->panel2->Controls->Add(this->label10);
 			this->panel2->Controls->Add(this->label9);
-			this->panel2->Location = System::Drawing::Point(349, 91);
+			this->panel2->Location = System::Drawing::Point(328, 12);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(269, 308);
+			this->panel2->Size = System::Drawing::Size(269, 246);
 			this->panel2->TabIndex = 23;
 			// 
 			// FormInventario
@@ -359,7 +360,7 @@ namespace proyectofarmacia {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(649, 418);
+			this->ClientSize = System::Drawing::Size(634, 280);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->button1);
