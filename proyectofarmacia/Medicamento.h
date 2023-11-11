@@ -29,7 +29,6 @@ public:
 
 	std::string getDosis();
 	void setDosis(std::string _Dosis);
-
 	
 };
 

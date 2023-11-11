@@ -47,6 +47,8 @@ namespace proyectofarmacia {
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::TextBox^ textBox5;
+	private: System::Windows::Forms::Label^ label6;
 
 
 	private:
@@ -74,6 +76,8 @@ namespace proyectofarmacia {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -94,7 +98,7 @@ namespace proyectofarmacia {
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(135, 131);
+			this->textBox3->Location = System::Drawing::Point(135, 145);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(100, 20);
 			this->textBox3->TabIndex = 2;
@@ -149,7 +153,7 @@ namespace proyectofarmacia {
 			this->label4->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Kristen ITC", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(56, 131);
+			this->label4->Location = System::Drawing::Point(56, 147);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(58, 18);
 			this->label4->TabIndex = 8;
@@ -181,6 +185,8 @@ namespace proyectofarmacia {
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::Khaki;
+			this->panel1->Controls->Add(this->textBox5);
+			this->panel1->Controls->Add(this->label6);
 			this->panel1->Controls->Add(this->textBox1);
 			this->panel1->Controls->Add(this->label5);
 			this->panel1->Controls->Add(this->textBox2);
@@ -193,6 +199,26 @@ namespace proyectofarmacia {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(287, 236);
 			this->panel1->TabIndex = 11;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->BackColor = System::Drawing::Color::Bisque;
+			this->label6->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Kristen ITC", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->Location = System::Drawing::Point(53, 98);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(77, 34);
+			this->label6->TabIndex = 10;
+			this->label6->Text = L"Dirección \r\nfiscal:";
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(136, 112);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(100, 20);
+			this->textBox5->TabIndex = 11;
 			// 
 			// FormProveedor
 			// 
