@@ -1,6 +1,10 @@
 #pragma once
 #include <msclr/marshal_cppstd.h>
 #include "Medicamento.h"
+#include "Proovedor.h"
+#include "Inventario.h"
+#include <list>
+#include <string>
 
 
 namespace proyectofarmacia {
@@ -86,32 +90,39 @@ namespace proyectofarmacia {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(135, 28);
+			this->textBox1->Location = System::Drawing::Point(180, 34);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 20);
+			this->textBox1->Size = System::Drawing::Size(132, 22);
 			this->textBox1->TabIndex = 0;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &FormProveedor::textBox1_TextChanged);
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(135, 71);
+			this->textBox2->Location = System::Drawing::Point(180, 87);
+			this->textBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(100, 20);
+			this->textBox2->Size = System::Drawing::Size(132, 22);
 			this->textBox2->TabIndex = 1;
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &FormProveedor::textBox2_TextChanged);
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(135, 145);
+			this->textBox3->Location = System::Drawing::Point(180, 178);
+			this->textBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(100, 20);
+			this->textBox3->Size = System::Drawing::Size(132, 22);
 			this->textBox3->TabIndex = 2;
+			this->textBox3->TextChanged += gcnew System::EventHandler(this, &FormProveedor::textBox3_TextChanged);
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(135, 180);
+			this->textBox4->Location = System::Drawing::Point(180, 222);
+			this->textBox4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(100, 20);
+			this->textBox4->Size = System::Drawing::Size(132, 22);
 			this->textBox4->TabIndex = 3;
+			this->textBox4->TextChanged += gcnew System::EventHandler(this, &FormProveedor::textBox4_TextChanged);
 			// 
 			// label1
 			// 
@@ -120,9 +131,10 @@ namespace proyectofarmacia {
 			this->label1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Kristen ITC", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(56, 28);
+			this->label1->Location = System::Drawing::Point(75, 34);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(63, 18);
+			this->label1->Size = System::Drawing::Size(77, 21);
 			this->label1->TabIndex = 5;
 			this->label1->Text = L"Nombre:";
 			// 
@@ -133,9 +145,10 @@ namespace proyectofarmacia {
 			this->label2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Kristen ITC", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(56, 71);
+			this->label2->Location = System::Drawing::Point(75, 87);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(38, 18);
+			this->label2->Size = System::Drawing::Size(47, 21);
 			this->label2->TabIndex = 6;
 			this->label2->Text = L"NIT:";
 			this->label2->Click += gcnew System::EventHandler(this, &FormProveedor::label2_Click);
@@ -143,9 +156,10 @@ namespace proyectofarmacia {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(179, 621);
+			this->label3->Location = System::Drawing::Point(239, 764);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(85, 13);
+			this->label3->Size = System::Drawing::Size(106, 16);
 			this->label3->TabIndex = 7;
 			this->label3->Text = L"Dirección Fiscal:";
 			// 
@@ -156,9 +170,10 @@ namespace proyectofarmacia {
 			this->label4->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Kristen ITC", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(56, 147);
+			this->label4->Location = System::Drawing::Point(75, 181);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(58, 18);
+			this->label4->Size = System::Drawing::Size(72, 21);
 			this->label4->TabIndex = 8;
 			this->label4->Text = L"Correo:";
 			// 
@@ -169,9 +184,10 @@ namespace proyectofarmacia {
 			this->label5->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Kristen ITC", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(56, 180);
+			this->label5->Location = System::Drawing::Point(75, 222);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(70, 18);
+			this->label5->Size = System::Drawing::Size(87, 21);
 			this->label5->TabIndex = 9;
 			this->label5->Text = L"Teléfono:";
 			// 
@@ -179,9 +195,10 @@ namespace proyectofarmacia {
 			// 
 			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->button1->Location = System::Drawing::Point(136, 265);
+			this->button1->Location = System::Drawing::Point(181, 326);
+			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(83, 27);
+			this->button1->Size = System::Drawing::Size(111, 33);
 			this->button1->TabIndex = 10;
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &FormProveedor::button1_Click);
@@ -199,17 +216,20 @@ namespace proyectofarmacia {
 			this->panel1->Controls->Add(this->textBox4);
 			this->panel1->Controls->Add(this->label2);
 			this->panel1->Controls->Add(this->label1);
-			this->panel1->Location = System::Drawing::Point(32, 23);
+			this->panel1->Location = System::Drawing::Point(43, 28);
+			this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(287, 236);
+			this->panel1->Size = System::Drawing::Size(383, 290);
 			this->panel1->TabIndex = 11;
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(136, 112);
+			this->textBox5->Location = System::Drawing::Point(181, 138);
+			this->textBox5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(100, 20);
+			this->textBox5->Size = System::Drawing::Size(132, 22);
 			this->textBox5->TabIndex = 11;
+			this->textBox5->TextChanged += gcnew System::EventHandler(this, &FormProveedor::textBox5_TextChanged);
 			// 
 			// label6
 			// 
@@ -218,22 +238,24 @@ namespace proyectofarmacia {
 			this->label6->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Kristen ITC", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(53, 98);
+			this->label6->Location = System::Drawing::Point(71, 121);
+			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(77, 34);
+			this->label6->Size = System::Drawing::Size(93, 40);
 			this->label6->TabIndex = 10;
 			this->label6->Text = L"Dirección \r\nfiscal:";
 			// 
 			// FormProveedor
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(343, 305);
+			this->ClientSize = System::Drawing::Size(457, 375);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->panel1);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"FormProveedor";
 			this->Text = L"FormProveedor";
 			this->panel1->ResumeLayout(false);
@@ -251,16 +273,23 @@ private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e)
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
 {
-	System::String^ nombre = textBox1->Text;
-	System::String^ fiscal = textBox5->Text;
-	System::String^ correo = textBox3->Text;
+	String^ nombre = textBox1->Text;
+	String^ fiscal = textBox5->Text;
+	String^ correo = textBox3->Text;
+	String^ NIT = textBox2->Text;
+	String^ Telefono = textBox4->Text;
 
-	std::string _nombre = msclr::interop::marshal_as<std::string>(nombre);
-	std::string _fiscal = msclr::interop::marshal_as<std::string>(fiscal);
-	std::string _correo = msclr::interop::marshal_as<std::string>(correo);	
+	Proovedor^ Supplier = gcnew Proovedor(nombre, fiscal, correo, NIT, Telefono);
 
-	Medicamento* Agregar = new Proovedor (_nombre, _fiscal, _correo, Convert::ToInt32(textBox2->Text), Convert::ToInt32(textBox4->Text));
 
+}
+private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

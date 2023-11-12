@@ -5,15 +5,15 @@
 #include <list>
 using namespace System;
 
- class Inventario : public Medicamento
+ref class Inventario : public Medicamento
 {
 private:
 
 	double PrecioCompra;
 	double PrecioVenta;
 	int Stock;
-	Proovedor Supplier;
-	std::string Caducidad;
+	Proovedor^ Supplier;
+	String^ Caducidad;
 
 	//TERMINAR MEDICINAS MEJOR
 	//TODA ESTA SHIT LISTAS MEJOR HACERLA EN EL MAIN
@@ -32,11 +32,8 @@ private:
 	 */
 
 public:
-	//da error el getprecio porque 
-	//falta agregar todo en Padre 
-	//al igual que ya se hizo con getprecio
-	
-	Inventario(std::string Nombre, int ID, std::string Clasificacion, std::string PrincipisActivos, std::string Dosis, double _PrecioCompra, double _PrecioVenta, int _Stock, Proovedor _Supplier, std::string _Caducidad);
+	Inventario();
+	Inventario(String^ Nombre, int ID, String^ Clasificacion, String^ PrincipisActivos, String^ Dosis, double _PrecioCompra, double _PrecioVenta, int _Stock, Proovedor^ _Supplier, String^ _Caducidad);
 
 	double getPrecioCompra();
 	void setPrecioCompra(double _PrecioCompra);
@@ -47,12 +44,8 @@ public:
 	int getStock();
 	void setStock(int _Stock);
 
-	Proovedor getSupplier();
-	void setSupplier(Proovedor _Supplier);
-
-	//void setProovedor(std::string Nombre, std::string NIT, std::string DireccionFiscal, std::string Correo, std::string Telefono, int ID);
+	Proovedor getSupplier();	
 
 	
 };
 
- // clase mas

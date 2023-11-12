@@ -4,37 +4,33 @@
 
 using namespace System;
 
- class Proovedor : public Medicamento//NUESTRO NODO DE PROVEDOOR
+ref class Proovedor //NUESTRO NODO DE PROVEDOOR
 {
 
 public:
-	/* std::string Nombre;
-	 std::string NIT;
-	 std::string DireccionFiscal;
-	 std::string Correo;
-	 std::string Telefono;*/
+	 String^ Nombre;
+	 String^ NIT;
+	 String^ DireccionFiscal;
+	 String^ Correo;
+	 String^ Telefono;
 	 
-	 Proovedor(std::string _Nombre, std::string _DireccionFiscal, std::string _Correo, int _NIT, int _Telefono);
+	 Proovedor();
+	 Proovedor(String^ _Nombre, String^ _DireccionFiscal, String^ _Correo, String^ _NIT, String^ _Telefono);
 	 
-	 int setTelefono()override;
-	 std::string setNombre()override;
-	 int setNIT()override;
-	 std::string setDireccionFiscal()override;
-	 std::string setCorreo()override;
+	 String^ getNombre();
+	 void setNombre(String^ _Nombre);
 
-	 /*std::string getNombre();
-	 
+	 String^ getNIT();
+	 void setNIT(String^ _Nombre);
 
-	 std::string getNIT();
-	 void setNIT(std::string _NIT)override;
+	 String^ getDireccionFiscal();
+	 void setDireccionFiscal(String^ _Nombre);
 
-	 std::string getDireccionFiscal();
-	 void setDireccionFiscal(std::string _DireccionFiscal)override;
+	 String^ getCorreo();
+	 void setCorreo(String^ _Nombre);
 
-	 std::string getCorreo();
-	 void setCorreo(std::string _Correo)override;
+	 String^ getTelefono();
+	 void setTelefono(String^ _Nombre);
 
-	 std::string getTelefono();*/
-	 
 };
 

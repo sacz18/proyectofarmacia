@@ -2,61 +2,66 @@
 
 
 
-Proovedor::Proovedor(std::string _Nombre, std::string _DireccionFiscal, std::string _Correo, int _NIT, int _Telefono)
+Proovedor::Proovedor()
 {
-	NombreProv = _Nombre;
+}
+
+Proovedor::Proovedor(String^ _Nombre, String^ _DireccionFiscal, String^ _Correo, String^ _NIT, String^ _Telefono)
+{
+	Nombre = _Nombre;
 	NIT = _NIT;
-	Dfiscal = _DireccionFiscal;
+	DireccionFiscal = _DireccionFiscal;
 	Correo = _Correo;
 	Telefono = _Telefono;
 }
 
-//std::string Proovedor::getNombre()
-//{
-//	return Nombre;
-//}
-//
-std::string Proovedor::setNombre()
+String^ Proovedor::getNombre()
 {
-	return NombreProv;
+	return Nombre;
 }
-//
-//std::string Proovedor::getNIT()
-//{
-//	return NIT;
-//}
-//
-int Proovedor::setNIT()
+
+void Proovedor::setNombre(String^ _Nombre)
+{
+	Nombre = _Nombre;
+}
+
+String^ Proovedor::getNIT()
 {
 	return NIT;
 }
-//
-//std::string Proovedor::getDireccionFiscal()
-//{
-//	return DireccionFiscal;
-//}
-//
-std::string Proovedor::setDireccionFiscal()
+
+void Proovedor::setNIT(String^ _Nombre)
 {
-	return Dfiscal;
+	NIT = _Nombre;
 }
-//
-//std::string Proovedor::getCorreo()
-//{
-//	return Correo;
-//}
-//
-std::string Proovedor::setCorreo()
+
+String^ Proovedor::getDireccionFiscal()
+{
+	return DireccionFiscal;
+}
+
+void Proovedor::setDireccionFiscal(String^ _Nombre)
+{
+	DireccionFiscal = _Nombre;
+}
+
+String^ Proovedor::getCorreo()
 {
 	return Correo;
 }
-//
-//std::string Proovedor::getTelefono()
-//{
-//	return Telefono;
-//}
 
-int Proovedor::setTelefono()
+void Proovedor::setCorreo(String^ _Nombre)
 {
-	return Telefono; 
+	Correo = _Nombre;
 }
+
+String^ Proovedor::getTelefono()
+{
+	return Telefono;
+}
+
+void Proovedor::setTelefono(String^ _Nombre)
+{
+	Telefono = _Nombre;
+}
+

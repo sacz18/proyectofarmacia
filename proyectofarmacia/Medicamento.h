@@ -4,54 +4,34 @@
 //MEDICAMENTO ES LA CLASE PADRE
 
 using namespace System;
- class Medicamento //NODO MEDICAMENTO
+ ref class Medicamento //NODO MEDICAMENTO
 {
 protected:
-	std::string Nombre;
+	String^ Nombre;
 	int NumeroID;
-	std::string Clasificacion;
-	std::string PrincipiosActivos;
-	std::string Dosis;
+	String^ Clasificacion;
+	String^ PrincipiosActivos;
+	String^ Dosis;
 
 public:
 
-	int Telefono;
-	std::string NombreProv;
-	int NIT;
-	std::string Dfiscal;
-	std::string Correo;
+	Medicamento();
+	Medicamento(String^ _Nombre, int _ID, String^ _Clasificacion, String^ _PrincipiosActivos, String^ _Dosis);
 
+	String^ getNombre();
+	void setNombre(String^ _Nombre);
 
-	virtual std::string setNombre();
-	virtual int setTelefono() = 0;
-	virtual int setNIT() = 0;
-	virtual std::string setDireccionFiscal();
-	virtual std::string setCorreo();
+	String^ getClasificacion();
+	void setClasificacion(String^ _Clasificacion);
 
-	//Medicamento(std::string _DireccionFiscal,std::string _Nombre, int _NIT, std::string _Clasificacion, std::string _PrincipiosActivos, std::string _Dosis);
-	//std::string getCorreo();
-	//virtual void setCorreo(std::string _Correo);
+	String^ getPrincipiosActivos();
+	void setPrincipiosActivos(String^ _PrincipiosActivos);
 
-	//int getTelefono();
-	//virtual void setTelefono() = 0;
-
-	//std::string getDireccionFiscal();
-	//virtual void setDireccionFiscal(std::string _DireccionFiscal);
-
-	//std::string getNombre();
-	//virtual void setNombre(/*std::string _Nombre*/);
-
-	//int getNumeroNIT();
-	//virtual void setNumeroNIT(int _NIT);
-
-	//std::string getClasificacion();
-	//virtual void setClasificacion(std::string _Clasificacion);
-
-	//std::string getPrincipiosActivos();
-	//virtual void setPrincipiosActivos(std::string _PrincipiosActivos);
-
-	//std::string getDosis();
-	//virtual void setDosis(std::string _Dosis);
+	String^ getDosis();
+	void setDosis(String^ _Dosis);
 	
+	int getID();
+	void setID(int _ID);
+
 };
 
