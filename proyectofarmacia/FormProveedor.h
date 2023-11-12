@@ -76,8 +76,8 @@ namespace proyectofarmacia {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -181,6 +181,7 @@ namespace proyectofarmacia {
 			this->button1->Size = System::Drawing::Size(83, 27);
 			this->button1->TabIndex = 10;
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &FormProveedor::button1_Click);
 			// 
 			// panel1
 			// 
@@ -200,6 +201,13 @@ namespace proyectofarmacia {
 			this->panel1->Size = System::Drawing::Size(287, 236);
 			this->panel1->TabIndex = 11;
 			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(136, 112);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(100, 20);
+			this->textBox5->TabIndex = 11;
+			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
@@ -212,13 +220,6 @@ namespace proyectofarmacia {
 			this->label6->Size = System::Drawing::Size(77, 34);
 			this->label6->TabIndex = 10;
 			this->label6->Text = L"Dirección \r\nfiscal:";
-			// 
-			// textBox5
-			// 
-			this->textBox5->Location = System::Drawing::Point(136, 112);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(100, 20);
-			this->textBox5->TabIndex = 11;
 			// 
 			// FormProveedor
 			// 
@@ -244,6 +245,10 @@ namespace proyectofarmacia {
 private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+	Medicamento* Agregar = new Proovedor(textBox1->Text, Convert::ToInt32(textBox2->Text), textBox5->Text, textBox3->Text, Convert::ToInt32(textBox4->Text));
 }
 };
 }

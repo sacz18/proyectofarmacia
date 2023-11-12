@@ -1,34 +1,36 @@
 #pragma once
 #include <iostream>
+#include "Medicamento.h"
 
 using namespace System;
 
- class Proovedor //NUESTRO NODO DE PROVEDOOR
+ class Proovedor : public Medicamento//NUESTRO NODO DE PROVEDOOR
 {
 
 public:
-	 std::string Nombre;
+	/* std::string Nombre;
 	 std::string NIT;
 	 std::string DireccionFiscal;
 	 std::string Correo;
-	 std::string Telefono;
+	 std::string Telefono;*/
+	 
+	 Proovedor(std::string _Nombre, std::string _NIT, std::string _DireccionFiscal, std::string _Correo, int _Telefono);
+	 
+	 int setTelefono()override;
 
-	 Proovedor();
-	 Proovedor(std::string _Nombre, std::string _NIT, std::string _DireccionFiscal, std::string _Correo, std::string _Telefono);
-
-	 std::string getNombre();
-	 void setNombre(std::string _Nombre);
+	 /*std::string getNombre();
+	 void setNombre(std::string _Nombre)override;
 
 	 std::string getNIT();
-	 void setNIT(std::string _NIT);
+	 void setNIT(std::string _NIT)override;
 
 	 std::string getDireccionFiscal();
-	 void setDireccionFiscal(std::string _DireccionFiscal);
+	 void setDireccionFiscal(std::string _DireccionFiscal)override;
 
 	 std::string getCorreo();
-	 void setCorreo(std::string _Correo);
+	 void setCorreo(std::string _Correo)override;
 
-	 std::string getTelefono();
-	 void setTelefono(std::string _Telefono);
+	 std::string getTelefono();*/
+	 
 };
 

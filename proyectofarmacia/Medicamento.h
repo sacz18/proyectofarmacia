@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 
+//MEDICAMENTO ES LA CLASE PADRE
+
 using namespace System;
  class Medicamento //NODO MEDICAMENTO
 {
@@ -12,23 +14,34 @@ protected:
 	std::string Dosis;
 
 public:
-	Medicamento();
-	Medicamento(std::string _Nombre, int _ID, std::string _Clasificacion, std::string _PrincipiosActivos, std::string _Dosis);
 
-	std::string getNombre();
-	void setNombre(std::string _Nombre);
+	int Telefono;
+	
+	virtual int setTelefono() = 0;
+	//Medicamento(std::string _DireccionFiscal,std::string _Nombre, int _NIT, std::string _Clasificacion, std::string _PrincipiosActivos, std::string _Dosis);
+	//std::string getCorreo();
+	//virtual void setCorreo(std::string _Correo);
 
-	int getNumeroID();
-	void setNumeroID(int _NumeroID);
+	//int getTelefono();
+	//virtual void setTelefono() = 0;
 
-	std::string getClasificacion();
-	void setClasificacion(std::string _Clasificacion);
+	//std::string getDireccionFiscal();
+	//virtual void setDireccionFiscal(std::string _DireccionFiscal);
 
-	std::string getPrincipiosActivos();
-	void setPrincipiosActivos(std::string _PrincipiosActivos);
+	//std::string getNombre();
+	//virtual void setNombre(/*std::string _Nombre*/);
 
-	std::string getDosis();
-	void setDosis(std::string _Dosis);
+	//int getNumeroNIT();
+	//virtual void setNumeroNIT(int _NIT);
+
+	//std::string getClasificacion();
+	//virtual void setClasificacion(std::string _Clasificacion);
+
+	//std::string getPrincipiosActivos();
+	//virtual void setPrincipiosActivos(std::string _PrincipiosActivos);
+
+	//std::string getDosis();
+	//virtual void setDosis(std::string _Dosis);
 	
 };
 
