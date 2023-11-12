@@ -16,8 +16,18 @@ protected:
 public:
 
 	int Telefono;
-	
+	std::string NombreProv;
+	int NIT;
+	std::string Dfiscal;
+	std::string Correo;
+
+
+	virtual std::string setNombre();
 	virtual int setTelefono() = 0;
+	virtual int setNIT() = 0;
+	virtual std::string setDireccionFiscal();
+	virtual std::string setCorreo();
+
 	//Medicamento(std::string _DireccionFiscal,std::string _Nombre, int _NIT, std::string _Clasificacion, std::string _PrincipiosActivos, std::string _Dosis);
 	//std::string getCorreo();
 	//virtual void setCorreo(std::string _Correo);

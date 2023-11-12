@@ -14,12 +14,16 @@ public:
 	 std::string Correo;
 	 std::string Telefono;*/
 	 
-	 Proovedor(std::string _Nombre, std::string _NIT, std::string _DireccionFiscal, std::string _Correo, int _Telefono);
+	 Proovedor(std::string _Nombre, std::string _DireccionFiscal, std::string _Correo, int _NIT, int _Telefono);
 	 
 	 int setTelefono()override;
+	 std::string setNombre()override;
+	 int setNIT()override;
+	 std::string setDireccionFiscal()override;
+	 std::string setCorreo()override;
 
 	 /*std::string getNombre();
-	 void setNombre(std::string _Nombre)override;
+	 
 
 	 std::string getNIT();
 	 void setNIT(std::string _NIT)override;
