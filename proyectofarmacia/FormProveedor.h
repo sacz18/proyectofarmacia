@@ -1,5 +1,6 @@
 #pragma once
 #include <msclr/marshal_cppstd.h>
+#include "Medicamento.h"
 
 
 namespace proyectofarmacia {
@@ -258,7 +259,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	std::string _fiscal = msclr::interop::marshal_as<std::string>(fiscal);
 	std::string _correo = msclr::interop::marshal_as<std::string>(correo);	
 
-	Medicamento* Agregar = new Proovedor(_nombre, _fiscal, _correo, Convert::ToInt32(textBox2->Text), Convert::ToInt32(textBox4->Text));
+	Medicamento* Agregar = new Proovedor (_nombre, _fiscal, _correo, Convert::ToInt32(textBox2->Text), Convert::ToInt32(textBox4->Text));
 
 }
 };
