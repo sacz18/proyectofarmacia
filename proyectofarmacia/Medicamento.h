@@ -7,11 +7,11 @@ using namespace System;
  class Medicamento //NODO MEDICAMENTO
 {
 protected:
-	std::string Nombre;
+	/*std::string Nombre;
 	int NumeroID;
 	std::string Clasificacion;
 	std::string PrincipiosActivos;
-	std::string Dosis;
+	std::string Dosis;*/
 
 public:
 

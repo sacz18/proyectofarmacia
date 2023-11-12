@@ -4,6 +4,7 @@
 #include "Medicamento.h"
 #include "Proovedor.h"
 #include "FormProveedor.h"
+#include <list>
 
 
 namespace proyectofarmacia 
@@ -172,7 +173,10 @@ namespace proyectofarmacia
 		FormProveedor^ fomr_proveedor = gcnew FormProveedor();
 		fomr_proveedor->Show();
 	}
-	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		FormProveedor^ formproveedor = gcnew FormProveedor();
+		std::list<std::string> NombreProve = formproveedor->NombrE();
 	}
 	private: System::Void AgregarInv_Click(System::Object^ sender, System::EventArgs^ e) 
 	{

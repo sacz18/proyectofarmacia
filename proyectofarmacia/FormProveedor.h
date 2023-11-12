@@ -1,9 +1,13 @@
 #pragma once
 #include <msclr/marshal_cppstd.h>
 #include "Medicamento.h"
+#include <list>
+#include "MyForm.h"
 
 
-namespace proyectofarmacia {
+
+namespace proyectofarmacia 
+{
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -11,6 +15,13 @@ namespace proyectofarmacia {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+
+	std::list<std::string> NombrE;
+	std::list<std::string> CorreO;
+	std::list<std::string> DirecfiscaL;
+	std::list<int> NiT;
+	std::list<int> TelefonO;
+
 
 	/// <summary>
 	/// Resumen de FormProveedor
@@ -25,7 +36,7 @@ namespace proyectofarmacia {
 			//TODO: agregar código de constructor aquí
 			//
 		}
-
+		
 	protected:
 		/// <summary>
 		/// Limpiar los recursos que se estén usando.
@@ -243,11 +254,17 @@ namespace proyectofarmacia {
 
 		}
 #pragma endregion
-	private: System::Void panel2_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+	private: System::Void panel2_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) 
+	{
+
 	}
-private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) 
+{
+
 }
-private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
 {
@@ -260,6 +277,17 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	std::string _correo = msclr::interop::marshal_as<std::string>(correo);	
 
 	Medicamento* Agregar = new Proovedor (_nombre, _fiscal, _correo, Convert::ToInt32(textBox2->Text), Convert::ToInt32(textBox4->Text));
+	std::string Nombre = Agregar->setNombre();
+	std::string DirFiscal = Agregar->setDireccionFiscal();
+	std::string Correo = Agregar->setCorreo();
+	int Nit = Agregar->setNIT();
+	int telefono = Agregar->setTelefono();
+
+	NombrE.push_back(Nombre);
+	DirecfiscaL.push_back(DirFiscal);
+	CorreO.push_back(Correo);
+	NiT.push_back(Nit);
+	TelefonO.push_back(telefono);
 
 }
 };

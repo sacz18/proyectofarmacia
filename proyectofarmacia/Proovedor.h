@@ -8,7 +8,7 @@ using namespace System;
 {
 
 public:
-	/* std::string Nombre;
+	 /*std::string Nombre;
 	 std::string NIT;
 	 std::string DireccionFiscal;
 	 std::string Correo;
