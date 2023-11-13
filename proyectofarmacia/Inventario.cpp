@@ -2,21 +2,17 @@
 
 
 
-Inventario::Inventario(
-	String^ Nombre, int ID, String^ Clasificacion, String^ PrincipisActivos, String^ Dosis, double _PrecioCompra, double _PrecioVenta, int _Stock, Proovedor^ _Supplier, String^ _Caducidad)
-	: Medicamento(Nombre, ID, Clasificacion, PrincipisActivos, Dosis)
+Inventario::Inventario()
 {
+}
 
+Inventario::Inventario(std::string Nombre, int ID, std::string Clasificacion, std::string PrincipisActivos, std::string Dosis, double _PrecioCompra, double _PrecioVenta, int _Stock, Proovedor _Supplier, std::string _Caducidad) : Medicamento(Nombre, ID, Clasificacion, PrincipisActivos, Dosis)
+{
 	PrecioCompra = _PrecioCompra;
 	PrecioVenta = _PrecioVenta;
 	Stock = _Stock;
 	Supplier = _Supplier;
 	Caducidad = _Caducidad;
-
-}
-
-Inventario::Inventario()
-{
 }
 
 double Inventario::getPrecioCompra()
@@ -47,6 +43,16 @@ int Inventario::getStock()
 void Inventario::setStock(int _Stock)
 {
 	Stock = _Stock;
+}
+
+std::string Inventario::getCaducidad()
+{
+	return Caducidad;
+}
+
+std::string Inventario::getSupplier()
+{
+	return Supplier.Nombre;
 }
 
 

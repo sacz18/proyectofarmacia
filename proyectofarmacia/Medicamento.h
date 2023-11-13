@@ -1,34 +1,35 @@
 #pragma once
 #include <iostream>
+#include <string>
 
 //MEDICAMENTO ES LA CLASE PADRE
 
 using namespace System;
- ref class Medicamento //NODO MEDICAMENTO
+ class Medicamento //NODO MEDICAMENTO
 {
 protected:
-	String^ Nombre;
+	std::string Nombre;
 	int NumeroID;
-	String^ Clasificacion;
-	String^ PrincipiosActivos;
-	String^ Dosis;
+	std::string Clasificacion;
+	std::string PrincipiosActivos;
+	std::string Dosis;
 
 public:
 
 	Medicamento();
-	Medicamento(String^ _Nombre, int _ID, String^ _Clasificacion, String^ _PrincipiosActivos, String^ _Dosis);
+	Medicamento(std::string _Nombre, int _ID, std::string _Clasificacion, std::string _PrincipiosActivos, std::string _Dosis);
 
-	String^ getNombre();
-	void setNombre(String^ _Nombre);
+	std::string getNombre();
+	void setNombre(std::string _Nombre);
 
-	String^ getClasificacion();
-	void setClasificacion(String^ _Clasificacion);
+	std::string getClasificacion();
+	void setClasificacion(std::string _Clasificacion);
 
-	String^ getPrincipiosActivos();
-	void setPrincipiosActivos(String^ _PrincipiosActivos);
+	std::string getPrincipiosActivos();
+	void setPrincipiosActivos(std::string _PrincipiosActivos);
 
-	String^ getDosis();
-	void setDosis(String^ _Dosis);
+	std::string getDosis();
+	void setDosis(std::string _Dosis);
 	
 	int getID();
 	void setID(int _ID);

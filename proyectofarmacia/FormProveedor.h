@@ -7,6 +7,8 @@
 #include <string>
 
 
+
+
 namespace proyectofarmacia {
 
 	using namespace System;
@@ -16,12 +18,17 @@ namespace proyectofarmacia {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
+	
+
 	/// <summary>
 	/// Resumen de FormProveedor
 	/// </summary>
 	public ref class FormProveedor : public System::Windows::Forms::Form
 	{
 	public:
+
+		
+
 		FormProveedor(void)
 		{
 			InitializeComponent();
@@ -29,6 +36,8 @@ namespace proyectofarmacia {
 			//TODO: agregar código de constructor aquí
 			//
 		}
+
+		
 
 	protected:
 		/// <summary>
@@ -41,6 +50,7 @@ namespace proyectofarmacia {
 				delete components;
 			}
 		}
+
 	private: System::Windows::Forms::TextBox^ textBox1;
 	protected:
 	private: System::Windows::Forms::TextBox^ textBox2;
@@ -91,7 +101,7 @@ namespace proyectofarmacia {
 			// textBox1
 			// 
 			this->textBox1->Location = System::Drawing::Point(180, 34);
-			this->textBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(132, 22);
 			this->textBox1->TabIndex = 0;
@@ -100,7 +110,7 @@ namespace proyectofarmacia {
 			// textBox2
 			// 
 			this->textBox2->Location = System::Drawing::Point(180, 87);
-			this->textBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox2->Margin = System::Windows::Forms::Padding(4);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(132, 22);
 			this->textBox2->TabIndex = 1;
@@ -109,7 +119,7 @@ namespace proyectofarmacia {
 			// textBox3
 			// 
 			this->textBox3->Location = System::Drawing::Point(180, 178);
-			this->textBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox3->Margin = System::Windows::Forms::Padding(4);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(132, 22);
 			this->textBox3->TabIndex = 2;
@@ -118,7 +128,7 @@ namespace proyectofarmacia {
 			// textBox4
 			// 
 			this->textBox4->Location = System::Drawing::Point(180, 222);
-			this->textBox4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox4->Margin = System::Windows::Forms::Padding(4);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(132, 22);
 			this->textBox4->TabIndex = 3;
@@ -196,7 +206,7 @@ namespace proyectofarmacia {
 			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button1->Location = System::Drawing::Point(181, 326);
-			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(111, 33);
 			this->button1->TabIndex = 10;
@@ -217,7 +227,7 @@ namespace proyectofarmacia {
 			this->panel1->Controls->Add(this->label2);
 			this->panel1->Controls->Add(this->label1);
 			this->panel1->Location = System::Drawing::Point(43, 28);
-			this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel1->Margin = System::Windows::Forms::Padding(4);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(383, 290);
 			this->panel1->TabIndex = 11;
@@ -225,7 +235,7 @@ namespace proyectofarmacia {
 			// textBox5
 			// 
 			this->textBox5->Location = System::Drawing::Point(181, 138);
-			this->textBox5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox5->Margin = System::Windows::Forms::Padding(4);
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(132, 22);
 			this->textBox5->TabIndex = 11;
@@ -255,16 +265,22 @@ namespace proyectofarmacia {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->panel1);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"FormProveedor";
 			this->Text = L"FormProveedor";
+			this->Load += gcnew System::EventHandler(this, &FormProveedor::FormProveedor_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
+
+			
 		}
 #pragma endregion
+
+
+
 	private: System::Void panel2_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 	}
 private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -273,14 +289,15 @@ private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e)
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
 {
-	String^ nombre = textBox1->Text;
-	String^ fiscal = textBox5->Text;
-	String^ correo = textBox3->Text;
-	String^ NIT = textBox2->Text;
-	String^ Telefono = textBox4->Text;
+	std::string nombre = msclr::interop::marshal_as<std::string>(textBox1->Text);
+	std::string fiscal = msclr::interop::marshal_as<std::string>(textBox5->Text);
+	std::string correo = msclr::interop::marshal_as<std::string>(textBox3->Text);
+	std::string NIT = msclr::interop::marshal_as<std::string>(textBox2->Text);
+	std::string Telefono = msclr::interop::marshal_as<std::string>(textBox4->Text);
 
-	Proovedor^ Supplier = gcnew Proovedor(nombre, fiscal, correo, NIT, Telefono);
+	Proovedor Supplier(nombre, fiscal, correo, NIT, Telefono);
 
+	//ListaProovedores.push_back(Supplier);
 
 }
 private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -290,6 +307,8 @@ private: System::Void textBox5_TextChanged(System::Object^ sender, System::Event
 private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void FormProveedor_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

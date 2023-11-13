@@ -1,11 +1,12 @@
 #include "Medicamento.h"
+#include <string>
 
 Medicamento::Medicamento()
 {
 
 }
 
-Medicamento::Medicamento(String^ _Nombre, int _ID, String^ _Clasificacion, String^ _PrincipiosActivos, String^ _Dosis)
+Medicamento::Medicamento(std::string _Nombre, int _ID, std::string _Clasificacion, std::string _PrincipiosActivos, std::string _Dosis)
 {
 	Nombre = _Nombre;
 	NumeroID = _ID;
@@ -14,44 +15,44 @@ Medicamento::Medicamento(String^ _Nombre, int _ID, String^ _Clasificacion, Strin
 	Dosis = _Dosis;
 }
 
-String^ Medicamento::getNombre()
+std::string Medicamento::getNombre()
 {
 	return Nombre;
 }
 
-void Medicamento::setNombre(String^ _Nombre)
+void Medicamento::setNombre(std::string _Nombre)
 {
 	Nombre = _Nombre;
 
 }
 
 
-String^ Medicamento::getClasificacion()
+std::string Medicamento::getClasificacion()
 {
 	return Clasificacion;
 }
 
-void Medicamento::setClasificacion(String^ _Clasificacion)
+void Medicamento::setClasificacion(std::string _Clasificacion)
 {
 	Clasificacion = _Clasificacion;
 }
 
-String^ Medicamento::getPrincipiosActivos()
+std::string Medicamento::getPrincipiosActivos()
 {
 	return PrincipiosActivos;
 }
 
-void Medicamento::setPrincipiosActivos(String^ _PrincipiosActivos)
+void Medicamento::setPrincipiosActivos(std::string _PrincipiosActivos)
 {
 	PrincipiosActivos = _PrincipiosActivos;
 }
 
-String^ Medicamento::getDosis()
+std::string Medicamento::getDosis()
 {
 	return Dosis;
 }
 
-void Medicamento::setDosis(String^ _Dosis)
+void Medicamento::setDosis(std::string _Dosis)
 {
 	Dosis = _Dosis;
 }

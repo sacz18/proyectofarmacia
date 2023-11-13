@@ -5,35 +5,19 @@
 #include <list>
 using namespace System;
 
-ref class Inventario : public Medicamento
+class Inventario : public Medicamento
 {
 private:
 
 	double PrecioCompra;
 	double PrecioVenta;
 	int Stock;
-	Proovedor^ Supplier;
-	String^ Caducidad;
-
-	//TERMINAR MEDICINAS MEJOR
-	//TODA ESTA SHIT LISTAS MEJOR HACERLA EN EL MAIN
-	/*
-	 Proovedor& Proovedor1;
-	 Proovedor& Proovedor2;
-	 Proovedor& Proovedor3;
-	 Proovedor& Proovedor4;
-
-
-	 std::list<Medicamento> InventarioTotal;
-	 std::list<Medicamento> Lista1;
-	 std::list<Medicamento> Lista2;
-	 std::list<Medicamento> Lista3;
-	 std::list<Medicamento> Lista4;
-	 */
+	Proovedor Supplier;
+	std::string Caducidad;
 
 public:
 	Inventario();
-	Inventario(String^ Nombre, int ID, String^ Clasificacion, String^ PrincipisActivos, String^ Dosis, double _PrecioCompra, double _PrecioVenta, int _Stock, Proovedor^ _Supplier, String^ _Caducidad);
+	Inventario(std::string Nombre, int ID, std::string Clasificacion, std::string PrincipisActivos, std::string Dosis, double _PrecioCompra, double _PrecioVenta, int _Stock, Proovedor _Supplier, std::string _Caducidad);
 
 	double getPrecioCompra();
 	void setPrecioCompra(double _PrecioCompra);
@@ -44,7 +28,9 @@ public:
 	int getStock();
 	void setStock(int _Stock);
 
-	Proovedor getSupplier();	
+	std::string getCaducidad();
+
+	std::string getSupplier();
 
 	
 };
