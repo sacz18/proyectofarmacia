@@ -229,7 +229,7 @@ namespace proyectofarmacia
 	private: System::Void AgregarInv_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		FormInventario^ form_inventario = gcnew FormInventario();
-		form_inventario->Show();
+		form_inventario->ShowDialog();
 
 	}
 
